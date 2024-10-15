@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frej Karhakozian's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="video-container">
+        <video class="background-video" autoplay muted loop>
+          <source
+            src="https://videos.pexels.com/video-files/854323/854323-hd_1920_1080_25fps.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+        <div class="welcome-content">
+          <h3>Frej Karhakozian</h3>
+          <h2 class="welcome-heading">Welcome to My Digital Resume</h2>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav>
+        <a href="#profile"><i class="fas fa-user"></i></a>
+        <a href="#work-experience"><i class="fas fa-briefcase"></i></a>
+        <a href="#projects"><i class="fas fa-code"></i></a>
+        <a href="#education"><i class="fas fa-graduation-cap"></i></a>
+        <a href="#skills"><i class="fas fa-tools"></i></a>
+        <a href="#languages"><i class="fas fa-language"></i></a>
+        <a href="#contact"><i class="fas fa-envelope"></i></a>
+      </nav>
+
+      <section id="profile" class="section">
+        <div class="item">
+          <h2><i class="fa-solid fa-user-tie"></i> Profile Summary</h2>
+          <p>
+            I am a committed professional passionate about system development
+            and continuous growth. I believe that perfection is limited and
+            unattainable; instead, I strive for improvement and excellence. With
+            experience in both technical and leadership roles, I focus on
+            enhancing team performance and effectively solving complex problems,
+            knowing there is always room for growth.
+          </p>
+        </div>
+      </section>
+
+      <section id="work-experience" class="section">
+        <h2><i class="fa-solid fa-business-time"></i> Work Experience</h2>
+        <div class="item">
+          <h3>ICT Technician</h3>
+          <p><strong>Ericsson</strong> | Aug 2022 – Present</p>
+          <ul>
+            <li>I currently serve as an ICT Technician at Ericsson.</li>
+            <li>
+              Responsibilities include managing IT infrastructure,
+              troubleshooting technical issues, and collaborating with
+              cross-functional teams.
+            </li>
+          </ul>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('ict-details')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="ict-details" class="details" style="display: none">
+            <p>
+              In my role at Ericsson, I have gained extensive experience in
+              configuring and maintaining network systems. I am responsible for
+              ensuring optimal performance of databases and network
+              infrastructure. I have developed skills in problem-solving and
+              technical troubleshooting, which have enhanced my ability to work
+              effectively under pressure. Additionally, I collaborate with
+              various teams, improving my communication and teamwork abilities.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Service Technician</h3>
+          <p><strong>Cepheid</strong> | Dec 2020 – Jul 2022</p>
+          <ul>
+            <li>Worked as a Service Technician at Cepheid.</li>
+            <li>
+              Focused on troubleshooting and maintaining automated machinery,
+              along with process improvement initiatives.
+            </li>
+          </ul>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('cepheid-details')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="cepheid-details" class="details" style="display: none">
+            <p>
+              At Cepheid, I developed expertise in diagnosing and resolving
+              issues with automated systems, leading to increased efficiency and
+              reduced downtime. I learned the importance of precise calibration
+              and adherence to safety protocols in cleanroom environments. I
+              also improved my documentation skills, ensuring accurate reporting
+              and compliance with company standards.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Service Technician</h3>
+          <p><strong>AstraZeneca</strong> | Sep 2019 – Dec 2020</p>
+          <ul>
+            <li>Served as a Service Technician at AstraZeneca.</li>
+            <li>
+              Responsible for installing and calibrating machinery in cleanroom
+              settings while ensuring thorough documentation.
+            </li>
+          </ul>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('astrazeneca-details')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="astrazeneca-details" class="details" style="display: none">
+            <p>
+              During my tenure at AstraZeneca, I honed my skills in machine
+              installation and maintenance, contributing to the high standards
+              of production. I learned how to lead teams focused on
+              documentation and quality control, enhancing my leadership and
+              organizational skills. Additionally, I gained valuable insights
+              into the pharmaceutical industry's regulatory requirements and
+              quality assurance processes.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Quality Manager</h3>
+          <p><strong>Scania</strong> | Jun 2018 – Aug 2019</p>
+          <ul>
+            <li>Worked as a Quality Manager at Scania.</li>
+            <li>
+              Focused on implementing quality assurance processes for new engine
+              production.
+            </li>
+          </ul>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('scania-quality-details')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div
+            id="scania-quality-details"
+            class="details"
+            style="display: none"
+          >
+            <p>
+              In my role as Quality Manager at Scania, I was responsible for
+              ensuring that new engines met stringent quality standards. I
+              learned how to conduct various tests, such as leakage and airflow
+              tests, to uphold quality assurance. Additionally, I initiated
+              continuous improvement processes, fostering a culture of quality
+              within the production team. My experience with LEAN and 5S
+              methodologies significantly improved operational efficiency and
+              workplace organization.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Assembler</h3>
+          <p><strong>Scania</strong> | Oct 2017 – May 2018</p>
+          <ul>
+            <li>Worked as an Assembler at Scania.</li>
+            <li>
+              Responsible for the precise assembly of new engines and reporting
+              deviations.
+            </li>
+          </ul>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('scania-assembler-details')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div
+            id="scania-assembler-details"
+            class="details"
+            style="display: none"
+          >
+            <p>
+              As an Assembler at Scania, I gained hands-on experience in engine
+              assembly, ensuring high precision in every task. I was responsible
+              for reporting deviations and managing inventory effectively.
+              Collaborating with engineering teams taught me valuable
+              problem-solving skills, as we worked together to optimize assembly
+              processes.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Restaurant Manager</h3>
+          <p><strong>Sook</strong> | Mar 2014 – Aug 2017</p>
+          <ul>
+            <li>Served as the Restaurant Manager at Sook.</li>
+            <li>
+              Oversaw kitchen operations, customer service, and cash management.
+            </li>
+          </ul>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('sook-details')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="sook-details" class="details" style="display: none">
+            <p>
+              In my role as Restaurant Manager at Sook, I developed strong
+              leadership skills by managing kitchen operations and customer
+              service. I learned about inventory management, quality assurance,
+              and the importance of hygiene standards in the food industry. My
+              experience in recruitment and team management enhanced my ability
+              to foster a positive workplace culture and drive service
+              excellence.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Network Technician</h3>
+          <p><strong>Syriatel</strong> | Dec 2007 – Jan 2011</p>
+          <ul>
+            <li>Worked as a Network Technician at Syriatel.</li>
+            <li>
+              Focused on configuring network equipment and providing technical
+              support.
+            </li>
+          </ul>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('syriatel-details')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="syriatel-details" class="details" style="display: none">
+            <p>
+              As a Network Technician at Syriatel, I supported the installation
+              and configuration of network equipment, which laid the foundation
+              for my technical skills. I learned to troubleshoot network
+              connectivity issues and provided user support, enhancing my
+              customer service skills. Working alongside senior technicians
+              allowed me to gain hands-on experience in routine maintenance
+              tasks and strengthen my understanding of network infrastructure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <h2><i class="fa-solid fa-list-check"></i> Projects</h2>
+
+        <div class="item">
+          <h3>Online Web Store Application (2023)</h3>
+          <p>
+            Developed and implemented a web store from scratch, including
+            planning and requirements analysis to gather feedback from potential
+            users.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('project-details-1')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="project-details-1" class="details" style="display: none">
+            <p>
+              In this project, I took full responsibility for the development of
+              a web store, from initial concept to final implementation. I
+              utilized C#, JavaScript, and SQL for backend and database
+              management, ensuring a seamless user experience. I learned how to
+              effectively gather user feedback through surveys and interviews,
+              which guided the design process and feature implementation. This
+              project enhanced my skills in user interface design and
+              strengthened my ability to work independently while managing
+              project timelines.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Web Travel Agency System (2022)</h3>
+          <p>
+            Led the development of a system for managing bookings, payments, and
+            travel itineraries for a travel agency using PHP, HTML, and CSS.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('project-details-2')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="project-details-2" class="details" style="display: none">
+            <p>
+              In this project, I was responsible for designing a user-friendly
+              platform that allowed customers to search for and book travel
+              services. I developed the system using PHP for server-side logic
+              and integrated payment gateways for secure transactions. This
+              experience taught me the importance of secure coding practices and
+              how to implement user authentication effectively. Additionally, I
+              gained valuable project management skills by coordinating with
+              stakeholders to ensure that all requirements were met and
+              deadlines were adhered to.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Inventory Management System (2022)</h3>
+          <p>
+            Designed and implemented an automated inventory management system to
+            streamline the handling of inventory, orders, and deliveries using
+            C# and SQL.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('project-details-3')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="project-details-3" class="details" style="display: none">
+            <p>
+              This project involved creating a scalable solution that allowed
+              for efficient tracking of inventory levels and order processing. I
+              learned to utilize SQL for database management, ensuring data
+              integrity and quick retrieval of information. The experience of
+              automating inventory processes highlighted the significance of
+              efficiency in operations and how technology can significantly
+              reduce human error and improve accuracy.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Online Learning Platform (2021)</h3>
+          <p>
+            Developed an online learning platform to deliver courses and
+            materials globally using JavaScript, HTML, and CSS.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('project-details-4')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="project-details-4" class="details" style="display: none">
+            <p>
+              In this project, I created a responsive and interactive platform
+              that allowed users to enroll in and complete courses. I focused on
+              building an intuitive user interface and implementing features
+              such as quizzes and progress tracking. Through this project, I
+              enhanced my skills in front-end development and learned how to
+              create engaging user experiences that facilitate learning. I also
+              improved my ability to troubleshoot and debug complex issues in
+              real-time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <h2><i class="fa-solid fa-user-graduate"></i> Education</h2>
+
+        <div class="item">
+          <h3>Web Server Programming, Astar, Solna (Nov 2023)</h3>
+          <p>
+            This course focused on developing and managing web applications
+            running on a web server, covering server-side scripting, ASP.NET,
+            C#, database management with SQL, and API integration.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('education-details-1')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="education-details-1" class="details" style="display: none">
+            <p>
+              I gained hands-on experience in web server environments,
+              implementing server-side functionalities and working with database
+              management systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Web Development 1-2, Astar, Solna (Aug - Oct 2023)</h3>
+          <p>
+            This program encompassed both foundational and advanced concepts in
+            web development, focusing on HTML, CSS, JavaScript, and responsive
+            design principles.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('education-details-2')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="education-details-2" class="details" style="display: none">
+            <p>
+              Through practical projects, I developed skills in creating
+              user-friendly websites, implementing SEO strategies, and ensuring
+              cross-browser compatibility.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Programming 1-2, Astar, Solna (Oct 2023)</h3>
+          <p>
+            These courses provided a solid foundation in programming concepts,
+            data structures, and algorithms using C# and Java.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('education-details-3')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="education-details-3" class="details" style="display: none">
+            <p>
+              I worked on various projects that enhanced my problem-solving
+              skills and my ability to write efficient code. I also learned best
+              practices in coding and debugging.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Computer Technology, Astar, Solna (May 2023)</h3>
+          <p>
+            This course emphasized the principles of computer hardware,
+            operating systems, and software applications.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('education-details-4')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="education-details-4" class="details" style="display: none">
+            <p>
+              I gained practical knowledge in troubleshooting hardware and
+              software issues, which significantly improved my technical skills.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Network Technology, Astar, Solna (May 2023)</h3>
+          <p>
+            This course covered network infrastructure, protocols, and security
+            measures essential for managing networks.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('education-details-5')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="education-details-5" class="details" style="display: none">
+            <p>
+              I learned about network configuration, troubleshooting, and
+              security best practices, which equipped me for roles in network
+              management.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Swedish as a Second Language, SAS, ABF, Kista (May 2017)</h3>
+          <p>
+            Completed a Swedish as a Second Language program, focusing on
+            improving language skills.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('sas-details')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="sas-details" class="details" style="display: none">
+            <p>
+              Gained experience in effective communication in various contexts,
+              language acquisition techniques, practice and cultural
+              understanding.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>High School Diploma, Karen Yepe, Aleppo (Jul 2007)</h3>
+          <p>
+            Completed high school education with a focus on sciences and
+            mathematics.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('education-details-8')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="education-details-8" class="details" style="display: none">
+            <p>
+              This provided a strong foundation in analytical thinking and
+              problem-solving skills.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Network Technology, Microsoft, Toronto (Jan 2007)</h3>
+          <p>
+            This course focused on network systems and the practical
+            applications of network configurations.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('education-details-9')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="education-details-9" class="details" style="display: none">
+            <p>
+              I learned about various networking concepts, security measures,
+              and gained hands-on experience in configuring network devices.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Microsoft Office, Microsoft, Toronto (Jan 2003)</h3>
+          <p>
+            Completed training in Microsoft Office applications including Word,
+            Excel, and PowerPoint.
+          </p>
+          <button
+            class="toggle-button"
+            onclick="toggleDetails('education-details-10')"
+            aria-expanded="false"
+          >
+            Details
+          </button>
+          <div id="education-details-10" class="details" style="display: none">
+            <p>
+              This training enhanced my skills in office productivity software,
+              improving my efficiency in documentation and presentation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <h2><i class="fa-solid fa-file-code"></i> Skills</h2>
+        <div class="item">
+          <div class="skill">
+            <img
+              src="https://img.icons8.com/color/48/000000/c-sharp-logo.png"
+              title="C#  80%"
+              alt="C#"
+              class="skill-logo"
+            />
+            <div class="progress-bar" data-value="80">
+              <div class="progress"></div>
+              <!-- Tooltip for percentage -->
+            </div>
+          </div>
+          <div class="skill">
+            <img
+              src="https://img.icons8.com/color/48/000000/javascript.png"
+              title="JavaScript 85%"
+              alt="JavaScript"
+              class="skill-logo"
+            />
+            <div class="progress-bar" data-value="85">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <img
+              src="https://img.icons8.com/?size=100&id=121463&format=png&color=000000"
+              title="PHP 60%"
+              alt="PHP Logo"
+              class="skill-logo"
+            />
+            <div class="progress-bar" data-value="60">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <img
+              src="https://img.icons8.com/color/48/000000/sql.png"
+              title="SQL 65%"
+              alt="SQL"
+              class="skill-logo"
+            />
+            <div class="progress-bar" data-value="65">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <img
+              src="https://img.icons8.com/color/48/000000/html-5.png"
+              title="HTML 95%"
+              alt="HTML"
+              class="skill-logo"
+            />
+            <div class="progress-bar" data-value="95">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <img
+              src="https://img.icons8.com/color/48/000000/css3.png"
+              title="CSS 97%"
+              alt="CSS"
+              class="skill-logo"
+            />
+            <div class="progress-bar" data-value="97">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <img
+              src="https://img.icons8.com/?size=100&id=jPZqMY4dHpLi&format=png&color=000000"
+              title="Network Configuration 70%"
+              alt="Network Configuration"
+              class="skill-logo"
+            />
+            <div class="progress-bar" data-value="70">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <img
+              src="https://img.icons8.com/color/48/000000/project-management.png"
+              title="Project Management 92%"
+              alt="Project Management"
+              class="skill-logo"
+            />
+            <div class="progress-bar" data-value="92">
+              <div class="progress"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="languages" class="section">
+        <h2><i class="fa-solid fa-earth-americas"></i> Languages</h2>
+        <div class="item">
+          <div class="language">
+            <img
+              src="https://flagcdn.com/w320/se.png"
+              data-level="Expert"
+              title="Swedish  90%"
+              alt="Swedish Flag"
+              class="flag-icon"
+            />
+            <div class="progress-bar" data-value="90">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="language">
+            <img
+              src="https://flagcdn.com/w320/us.png"
+              data-level="Expert"
+              alt="American Flag"
+              title="English  90%"
+              class="flag-icon"
+            />
+            <div class="progress-bar" data-value="80">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="language">
+            <img
+              src="https://flagcdn.com/w320/tr.png"
+              data-level="Expert"
+              alt="Turkish Flag"
+              title="Turkish  100%"
+              class="flag-icon"
+            />
+            <div class="progress-bar" data-value="100">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="language">
+            <img
+              src="https://flagpedia.net/data/flags/w580/sa.webp"
+              data-level="Expert"
+              title="Arabic  100%"
+              alt="Syrian Flag"
+              class="flag-icon"
+            />
+            <div class="progress-bar" data-value="100">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="language">
+            <img
+              src="https://flagcdn.com/w320/am.png"
+              data-level="Expert"
+              title="Armenian - Native"
+              alt="Armenian Flag"
+              class="flag-icon"
+            />
+            <div class="progress-bar" data-value="100">
+              <div class="progress"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2><i class="fa-regular fa-paper-plane fa-spin"></i> Contact</h2>
+
+        <div class="contact-info">
+          <div class="item">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <p>
+                <a href="mailto:karhakozian.frej@gmail.com"
+                  >karhakozian.frej@gmail.com</a
+                >
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <p>
+                <a href="tel:+46728344330">+46 72 834 43 30</a>
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-brands fa-linkedin"></i>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/frej-karhakozian/"
+                  target="_blank"
+                  >Frej Karhakozian</a
+                >
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-brands fa-github"></i>
+              <p>
+                <a
+                  href="https://github.com/Freyoins/Freyoin.git"
+                  target="_blank"
+                  >Freyoin&trade;</a
+                >
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-map-marker-alt"></i>
+              <p>
+                <a
+                  href="https://www.google.com/maps/place/Gamla+Enk%C3%B6pingsv%C3%A4gen+180,+174+64+Sundbyberg/@59.3830474,17.9399985,804m/data=!3m2!1e3!4b1!4m6!3m5!1s0x465f9e66628b630f:0x44595e70a65cdacf!8m2!3d59.3830474!4d17.9425734!16s%2Fg%2F11fxwq6dj8?entry=ttu&g_ep=EgoyMDI0MTAwOC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  >Gamla Enköpingsvägen 180, 174 64 Sundbyberg, Sweden</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Freyoin &copy;</p>
+
+      <div class="swedish-flag-cross"></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
