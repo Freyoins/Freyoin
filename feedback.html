@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="stylefb.css" />
+  </head>
+  <body>
+    <div class="feedback-container">
+      <h1>Feedback</h1>
+      <p>
+        Thank you for taking the time to provide feedback. I appreciate hearing
+        from you and will review your comments carefully.
+      </p>
+      <form id="feedbackForm" action="submit_feedback.php" method="POST">
+        <label for="recommend">Would you recommend me to others?</label>
+        <select id="recommend" name="recommend" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Maybe">Maybe</option>
+        </select>
+
+        <label for="satisfaction"
+          >How satisfied are you with my skills and experience?</label
+        >
+        <select id="satisfaction" name="satisfaction" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="Very Satisfied">Very Satisfied</option>
+          <option value="Satisfied">Satisfied</option>
+          <option value="Neutral">Neutral</option>
+          <option value="Dissatisfied">Dissatisfied</option>
+          <option value="Very Dissatisfied">Very Dissatisfied</option>
+        </select>
+
+        <label for="suggestions"
+          >Do you have any suggestions for improvement?</label
+        >
+        <textarea id="suggestions" name="suggestions" rows="4"></textarea>
+
+        <label for="email">Your Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="example@example.com"
+        />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="thankYouMessage" class="hidden">
+        <p>Thank you for your feedback! Your input is valuable to me.</p>
+      </div>
+      <button onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+    <footer>
+      <p>Freyoin &copy;</p>
+
+      <div class="swedish-flag-cross"></div>
+    </footer>
+    <script src="scriptfb.js"></script>
+  </body>
+</html>
