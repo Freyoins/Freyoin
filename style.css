@@ -388,57 +388,71 @@ html {
   font-size: 1.5em;
 }
 
-.cv-summary-container {
-  position: fixed;
-  bottom: 35px;
-  right: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 10px;
+  margin-bottom: 20px;
   z-index: 1000;
-  max-width: 300px;
-  font-size: 14px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
 }
 
-.cv-summary-container h3 {
-  margin-top: 0;
-  font-size: 16px;
-  color: #333333;
+.cv-summary-container,
+.feedback-button-container {
+  border: 2px solid black;
+  border-radius: 5px;
+  max-width: 200px;
+  margin: 0 10px;
+  flex-grow: 1;
 }
 
-.cv-summary-container h4 {
-  font-size: 15px;
-  margin-bottom: 10px;
+.cv-summary-container {
+  margin-right: 10px;
 }
 
-.cv-summary-container ul {
-  padding-left: 20px;
-  margin: 10px 0;
+.feedback-button-container {
+  margin-left: 10px;
 }
 
-.cv-summary-container ul li {
-  margin-bottom: 10px;
-}
-
-.download-cv-btn {
+.download-cv-btn,
+.feedback-button {
   display: block;
-  padding: 10px 20px;
+  padding: 10px;
   background-color: #007bff;
   color: white;
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
   font-weight: bold;
-  transition: all 0.2s ease-in-out;
+  width: 100%;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
-.download-cv-btn:hover {
-  background-color: #5a6268;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.download-cv-btn:hover,
+.feedback-button:hover {
+  background-color: #0056b3;
 }
 
-.download-cv-btn:active {
-  background-color: #4e555b;
-  box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.5);
-  transform: scale(0.96);
+.download-cv-btn:active,
+.feedback-button:active {
+  background-color: #d3d3d3;
+  color: black;
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(169, 169, 169, 0.5);
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cv-summary-container,
+  .feedback-button-container {
+    max-width: 90%;
+    margin: 5px 0;
+  }
 }
