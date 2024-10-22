@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback Form</title>
     <link rel="stylesheet" href="stylefb.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   </head>
   <body>
     <div class="feedback-container">
@@ -13,7 +15,7 @@
         Thank you for taking the time to provide feedback. I appreciate hearing
         from you and will review your comments carefully.
       </p>
-       <form id="feedbackForm" action="mailto:karhakozian.frej@gmail.com" method="POST" enctype="text/plain">
+      <form id="feedbackForm">
         <label for="recommend">Would you recommend me to others?</label>
         <select id="recommend" name="recommend" required>
           <option value="" disabled selected>Select an option</option>
@@ -51,16 +53,35 @@
         <button type="submit">Submit</button>
       </form>
 
-      <div id="thankYouMessage" class="hidden">
-        <p>Thank you for your feedback! Your input is valuable to me.</p>
-      </div>
       <button onclick="window.location.href='index.html'">Back to Home</button>
     </div>
     <footer>
       <p>Freyoin &copy;</p>
-
       <div class="swedish-flag-cross"></div>
     </footer>
-    <script src="scriptfb.js"></script>
+    <script>
+      (function () {
+        emailjs.init("BDkGxKGyGhlGz0M8G");
+      })();
+
+      $(document).ready(function () {
+        $("#feedbackForm").on("submit", function (event) {
+          event.preventDefault();
+
+          emailjs.sendForm("service_b7e8kby", "template_59qws0g", this).then(
+            function () {
+              $("#feedbackForm").hide();
+              $("#thankYouMessage").removeClass("hidden");
+            },
+            function (error) {
+              alert(
+                "There was an error submitting your feedback. Please try again later: " +
+                  JSON.stringify(error)
+              );
+            }
+          );
+        });
+      });
+    </script>
   </body>
 </html>
